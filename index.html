@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Omar Khamis | Software Developer</title>
+  <meta name="description" content="Omar Khamis - Full-Stack Developer with experience in Django, Flutter, PHP, and AI-driven solutions. Open to remote opportunities.">
+  <meta name="keywords" content="Software Developer, Remote, Django, Flutter, PHP, AI, GitHub Portfolio, Full Stack Developer">
+
+  <title>Omar Khamis | Full-Stack Developer</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -11,7 +14,6 @@
       padding: 0;
       background-color: #f5f5f5;
       color: #333;
-      transition: all 0.3s ease;
     }
 
     header {
@@ -40,6 +42,10 @@
 
     .section {
       margin-bottom: 30px;
+    }
+
+    .skills-category {
+      margin-bottom: 12px;
     }
 
     .skills span {
@@ -95,49 +101,42 @@
   <button class="lang-toggle" onclick="toggleLang()">AR</button>
 
   <header>
-    <h1 id="fullName" >Omar Khamis</h1>
+    <h1 id="fullName">Omar Khamis</h1>
     <img src="omar.jpg" alt="Omar Khamis" style="width: 150px; height: 150px; border-radius: 50%; margin: 20px auto; display: block; border: 4px solid white;" />
-    <p id="headline">Software Developer | Instructor | AI Enthusiast</p>
+    <p id="headline">Full-Stack Developer | Instructor | AI Enthusiast</p>
     <a href="Omar-Khamis-CV.pdf" download class="cv-button" id="downloadBtn">Download My CV (PDF)</a>
   </header>
 
   <div class="container">
     <div class="section">
-      <h2 id="aboutTitle">About Me</h2>
+      <h2 id="aboutTitle">Professional Summary</h2>
       <p id="aboutText">
-        I’m Omar Khamis, a dedicated and forward-thinking software developer from Yemen with a strong passion for artificial intelligence and modern technology. 
-        With years of experience in teaching and curriculum development, I design and deliver programs in computer science, programming, and web development across several institutes in Sana'a. 
-        I’ve empowered hundreds of students with essential digital skills and hold a Bachelor's degree in Computer Science.
+        I’m a Computer Science graduate and software developer from Yemen with experience building full-stack web and mobile applications. I specialize in Flutter, Django, and PHP, and have delivered scalable solutions for educational institutions and digital training programs. Passionate about AI and remote collaboration, I’m currently seeking international opportunities in innovative tech teams.
       </p>
     </div>
 
     <div class="section">
-      <h2 id="skillsTitle">Skills</h2>
+      <h2 id="skillsTitle">Technical Skills</h2>
       <div class="skills">
-        <span>Flutter & Dart</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>Python</span>
-        <span>Django</span>
-        <span>RESTful APIs</span>
-        <span>Artificial Intelligence</span>
+        <div class="skills-category"><strong>Frontend:</strong> <span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="skills-category"><strong>Backend:</strong> <span>PHP</span><span>MySQL</span><span>Python</span><span>Django</span></div>
+        <div class="skills-category"><strong>Mobile:</strong> <span>Flutter</span><span>Dart</span></div>
+        <div class="skills-category"><strong>Tools & Other:</strong> <span>RESTful APIs</span><span>Git</span><span>AI Concepts</span>
+        </div>
       </div>
     </div>
 
     <div class="section">
-      <h2 id="projectsTitle">Projects</h2>
+      <h2 id="projectsTitle">Key Projects</h2>
       <ul id="projectsList">
-        <li><strong>Student Management System</strong> – A PHP/MySQL based application for educational institutions.</li>
-        <li><strong>WhatsApp Campaign Manager</strong> – Built with Django to manage and automate marketing messages.</li>
-        <li><strong>Mobile Learning App</strong> – A Flutter-based app for students to learn coding interactively.</li>
+        <li><strong>Student Management System</strong> – A PHP/MySQL platform to manage students, fees, and academic records. <a href="https://github.com/omar-khamis-dev/student-management" target="_blank">GitHub</a></li>
+        <li><strong>WhatsApp Campaign Manager</strong> – A Django app that automates bulk WhatsApp marketing messages. <a href="https://github.com/omar-khamis-dev/whatsapp-campaign" target="_blank">GitHub</a></li>
+        <li><strong>Mobile Learning App</strong> – A Flutter-based app for teaching programming through interactive lessons. <a href="https://github.com/omar-khamis-dev/mobile-learning" target="_blank">GitHub</a></li>
       </ul>
     </div>
 
     <div class="section">
-      <h2 id="contactTitle">Contact</h2>
+      <h2 id="contactTitle">Let's Connect</h2>
       <p>
         📧 Email: omarkhamis088@gmail.com<br>
         🔗 <a href="https://www.linkedin.com/in/omar-khamis-dev" target="_blank">LinkedIn</a><br>
@@ -159,25 +158,25 @@
       document.querySelector('.lang-toggle').innerText = isArabic ? "EN" : "AR";
 
       document.getElementById("fullName").innerText = isArabic ? "عمر خميس" : "Omar Khamis";
-      document.getElementById("aboutTitle").innerText = isArabic ? "من أنا" : "About Me";
+      document.getElementById("aboutTitle").innerText = isArabic ? "نبذة احترافية" : "Professional Summary";
       document.getElementById("aboutText").innerText = isArabic 
-        ? "أنا عمر خميس، مطور برمجيات طموح من اليمن، شغوف بالذكاء الاصطناعي والتقنيات الحديثة. لدي سنوات من الخبرة في تدريس وتطوير المناهج في مجالات علوم الحاسوب، البرمجة، وتطوير المواقع في عدة معاهد بصنعاء. ساهمت في تمكين مئات الطلاب من المهارات الرقمية، وأحمل درجة البكالوريوس في علوم الحاسوب."
-        : "I’m Omar Khamis, a dedicated and forward-thinking software developer from Yemen with a strong passion for artificial intelligence and modern technology. With years of experience in teaching and curriculum development, I design and deliver programs in computer science, programming, and web development across several institutes in Sana'a. I’ve empowered hundreds of students with essential digital skills and hold a Bachelor's degree in Computer Science.";
+        ? "أنا مطور برمجيات من اليمن، حاصل على بكالوريوس علوم الحاسوب، لدي خبرة في تطوير تطبيقات الويب والموبايل باستخدام Django وFlutter وPHP. قمت ببناء حلول تعليمية رقمية وأسهمت في برامج تمكين رقمي. مهتم بالذكاء الاصطناعي وأبحث عن فرص عن بعد ضمن فرق تقنية عالمية."
+        : "I’m a Computer Science graduate and software developer from Yemen with experience building full-stack web and mobile applications. I specialize in Flutter, Django, and PHP, and have delivered scalable solutions for educational institutions and digital training programs. Passionate about AI and remote collaboration, I’m currently seeking international opportunities in innovative tech teams.";
 
-      document.getElementById("skillsTitle").innerText = isArabic ? "المهارات" : "Skills";
-      document.getElementById("projectsTitle").innerText = isArabic ? "المشاريع" : "Projects";
+      document.getElementById("skillsTitle").innerText = isArabic ? "المهارات التقنية" : "Technical Skills";
+      document.getElementById("projectsTitle").innerText = isArabic ? "أهم المشاريع" : "Key Projects";
       document.getElementById("projectsList").innerHTML = isArabic 
-        ? `<li><strong>نظام إدارة الطلاب</strong> – تطبيق مبني بـ PHP/MySQL للمعاهد التعليمية.</li>
-           <li><strong>مدير حملات واتساب</strong> – تطبيق باستخدام Django لإدارة الرسائل التسويقية.</li>
-           <li><strong>تطبيق تعليم تفاعلي</strong> – تطبيق باستخدام Flutter لتعليم البرمجة للطلاب.</li>`
-        : `<li><strong>Student Management System</strong> – A PHP/MySQL based application for educational institutions.</li>
-           <li><strong>WhatsApp Campaign Manager</strong> – Built with Django to manage and automate marketing messages.</li>
-           <li><strong>Mobile Learning App</strong> – A Flutter-based app for students to learn coding interactively.</li>`;
+        ? `<li><strong>نظام إدارة الطلاب</strong> – منصة PHP/MySQL لإدارة الطلاب والرسوم والسجلات الأكاديمية. <a href="https://github.com/omar-khamis-dev/student-management" target="_blank">GitHub</a></li>
+           <li><strong>مدير حملات واتساب</strong> – تطبيق Django لأتمتة الرسائل التسويقية عبر واتساب. <a href="https://github.com/omar-khamis-dev/whatsapp-campaign" target="_blank">GitHub</a></li>
+           <li><strong>تطبيق التعليم التفاعلي</strong> – تطبيق Flutter لتعليم البرمجة من خلال دروس تفاعلية. <a href="https://github.com/omar-khamis-dev/mobile-learning" target="_blank">GitHub</a></li>`
+        : `<li><strong>Student Management System</strong> – A PHP/MySQL platform to manage students, fees, and academic records. <a href="https://github.com/omar-khamis-dev/student-management" target="_blank">GitHub</a></li>
+           <li><strong>WhatsApp Campaign Manager</strong> – A Django app that automates bulk WhatsApp marketing messages. <a href="https://github.com/omar-khamis-dev/whatsapp-campaign" target="_blank">GitHub</a></li>
+           <li><strong>Mobile Learning App</strong> – A Flutter-based app for teaching programming through interactive lessons. <a href="https://github.com/omar-khamis-dev/mobile-learning" target="_blank">GitHub</a></li>`;
 
-      document.getElementById("contactTitle").innerText = isArabic ? "تواصل معي" : "Contact";
+      document.getElementById("contactTitle").innerText = isArabic ? "تواصل معي" : "Let's Connect";
       document.getElementById("headline").innerText = isArabic 
         ? "مطور برمجيات | مدرب | مهتم بالذكاء الاصطناعي"
-        : "Software Developer | Instructor | AI Enthusiast";
+        : "Full-Stack Developer | Instructor | AI Enthusiast";
 
       document.getElementById("downloadBtn").innerText = isArabic ? "تحميل السيرة الذاتية (PDF)" : "Download My CV (PDF)";
     }
