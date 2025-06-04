@@ -95,7 +95,7 @@
   <button class="lang-toggle" onclick="toggleLang()">AR</button>
 
   <header>
-    <h1>Omar Khamis</h1>
+    <h1 name="fullName" >Omar Khamis</h1>
     <img src="omar.jpg" alt="Omar Khamis" style="width: 150px; height: 150px; border-radius: 50%; margin: 20px auto; display: block; border: 4px solid white;" />
     <p id="headline">Software Developer | Instructor | AI Enthusiast</p>
     <a href="Omar-Khamis-CV.pdf" download class="cv-button" id="downloadBtn">Download My CV (PDF)</a>
@@ -158,6 +158,7 @@
       document.body.dir = isArabic ? "rtl" : "ltr";
       document.querySelector('.lang-toggle').innerText = isArabic ? "EN" : "AR";
 
+      document.getElementById("fullName").innerText = isArabic ? "عمر خميس" : "Omar Khamis";
       document.getElementById("aboutTitle").innerText = isArabic ? "من أنا" : "About Me";
       document.getElementById("aboutText").innerText = isArabic 
         ? "أنا عمر خميس، مطور برمجيات طموح من اليمن، شغوف بالذكاء الاصطناعي والتقنيات الحديثة. لدي سنوات من الخبرة في تدريس وتطوير المناهج في مجالات علوم الحاسوب، البرمجة، وتطوير المواقع في عدة معاهد بصنعاء. ساهمت في تمكين مئات الطلاب من المهارات الرقمية، وأحمل درجة البكالوريوس في علوم الحاسوب."
