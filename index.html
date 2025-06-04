@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,13 +11,16 @@
       padding: 0;
       background-color: #f5f5f5;
       color: #333;
+      transition: all 0.3s ease;
     }
+
     header {
       background-color: #0073b1;
       color: white;
       padding: 30px 20px;
       text-align: center;
     }
+
     .container {
       padding: 30px 20px;
       max-width: 900px;
@@ -25,16 +28,20 @@
       background: white;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    h1 {
-      margin: 0;
+
+    h1, h2 {
+      margin-top: 0;
     }
+
     a {
       color: #0073b1;
       text-decoration: none;
     }
+
     .section {
       margin-bottom: 30px;
     }
+
     .skills span {
       display: inline-block;
       background: #0073b1;
@@ -44,6 +51,7 @@
       border-radius: 6px;
       font-size: 14px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -51,36 +59,52 @@
       background: #eee;
       margin-top: 40px;
     }
-      .cv-button {
-    display: inline-block;
-    padding: 12px 20px;
-    margin: 20px auto;
-    background-color: #0366d6;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
 
-  .cv-button:hover {
-    background-color: #024a9e;
-  }
+    .cv-button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 20px auto;
+      background-color: #0366d6;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cv-button:hover {
+      background-color: #024a9e;
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 6px 12px;
+      background: white;
+      border: 2px solid #0073b1;
+      color: #0073b1;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
+  <button class="lang-toggle" onclick="toggleLang()">AR</button>
+
   <header>
     <h1>Omar Khamis</h1>
     <img src="omar.jpg" alt="Omar Khamis" style="width: 150px; height: 150px; border-radius: 50%; margin: 20px auto; display: block; border: 4px solid white;" />
-    <p>Software Developer | Instructor | AI Enthusiast</p>
-    <a href="Omar-Khamis-CV.pdf" download class="cv-button">Download My CV (PDF)</a>
+    <p id="headline">Software Developer | Instructor | AI Enthusiast</p>
+    <a href="Omar-Khamis-CV.pdf" download class="cv-button" id="downloadBtn">Download My CV (PDF)</a>
   </header>
 
   <div class="container">
     <div class="section">
-      <h2>About Me</h2>
-      <p>
+      <h2 id="aboutTitle">About Me</h2>
+      <p id="aboutText">
         I’m Omar Khamis, a dedicated and forward-thinking software developer from Yemen with a strong passion for artificial intelligence and modern technology. 
         With years of experience in teaching and curriculum development, I design and deliver programs in computer science, programming, and web development across several institutes in Sana'a. 
         I’ve empowered hundreds of students with essential digital skills and hold a Bachelor's degree in Computer Science.
@@ -88,7 +112,7 @@
     </div>
 
     <div class="section">
-      <h2>Skills</h2>
+      <h2 id="skillsTitle">Skills</h2>
       <div class="skills">
         <span>Flutter & Dart</span>
         <span>HTML</span>
@@ -104,17 +128,16 @@
     </div>
 
     <div class="section">
-      <h2>Projects</h2>
-      <ul>
+      <h2 id="projectsTitle">Projects</h2>
+      <ul id="projectsList">
         <li><strong>Student Management System</strong> – A PHP/MySQL based application for educational institutions.</li>
         <li><strong>WhatsApp Campaign Manager</strong> – Built with Django to manage and automate marketing messages.</li>
         <li><strong>Mobile Learning App</strong> – A Flutter-based app for students to learn coding interactively.</li>
-        <!-- يمكنك إضافة المزيد من المشاريع هنا -->
       </ul>
     </div>
 
     <div class="section">
-      <h2>Contact</h2>
+      <h2 id="contactTitle">Contact</h2>
       <p>
         📧 Email: omar.khamis.dev@gmail.com<br>
         🔗 <a href="https://www.linkedin.com/in/omar-khamis-dev" target="_blank">LinkedIn</a><br>
@@ -122,11 +145,42 @@
       </p>
     </div>
   </div>
-  
 
   <footer>
     &copy; 2025 Omar Khamis. All rights reserved.
   </footer>
+
+  <script>
+    let isArabic = false;
+
+    function toggleLang() {
+      isArabic = !isArabic;
+      document.body.dir = isArabic ? "rtl" : "ltr";
+      document.querySelector('.lang-toggle').innerText = isArabic ? "EN" : "AR";
+
+      document.getElementById("aboutTitle").innerText = isArabic ? "من أنا" : "About Me";
+      document.getElementById("aboutText").innerText = isArabic 
+        ? "أنا عمر خميس، مطور برمجيات طموح من اليمن، شغوف بالذكاء الاصطناعي والتقنيات الحديثة. لدي سنوات من الخبرة في تدريس وتطوير المناهج في مجالات علوم الحاسوب، البرمجة، وتطوير المواقع في عدة معاهد بصنعاء. ساهمت في تمكين مئات الطلاب من المهارات الرقمية، وأحمل درجة البكالوريوس في علوم الحاسوب."
+        : "I’m Omar Khamis, a dedicated and forward-thinking software developer from Yemen with a strong passion for artificial intelligence and modern technology. With years of experience in teaching and curriculum development, I design and deliver programs in computer science, programming, and web development across several institutes in Sana'a. I’ve empowered hundreds of students with essential digital skills and hold a Bachelor's degree in Computer Science.";
+
+      document.getElementById("skillsTitle").innerText = isArabic ? "المهارات" : "Skills";
+      document.getElementById("projectsTitle").innerText = isArabic ? "المشاريع" : "Projects";
+      document.getElementById("projectsList").innerHTML = isArabic 
+        ? `<li><strong>نظام إدارة الطلاب</strong> – تطبيق مبني بـ PHP/MySQL للمعاهد التعليمية.</li>
+           <li><strong>مدير حملات واتساب</strong> – تطبيق باستخدام Django لإدارة الرسائل التسويقية.</li>
+           <li><strong>تطبيق تعليم تفاعلي</strong> – تطبيق باستخدام Flutter لتعليم البرمجة للطلاب.</li>`
+        : `<li><strong>Student Management System</strong> – A PHP/MySQL based application for educational institutions.</li>
+           <li><strong>WhatsApp Campaign Manager</strong> – Built with Django to manage and automate marketing messages.</li>
+           <li><strong>Mobile Learning App</strong> – A Flutter-based app for students to learn coding interactively.</li>`;
+
+      document.getElementById("contactTitle").innerText = isArabic ? "تواصل معي" : "Contact";
+      document.getElementById("headline").innerText = isArabic 
+        ? "مطور برمجيات | مدرب | مهتم بالذكاء الاصطناعي"
+        : "Software Developer | Instructor | AI Enthusiast";
+
+      document.getElementById("downloadBtn").innerText = isArabic ? "تحميل السيرة الذاتية (PDF)" : "Download My CV (PDF)";
+    }
+  </script>
 
 </body>
 </html>
